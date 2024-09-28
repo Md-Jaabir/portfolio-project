@@ -1,0 +1,633 @@
+:root{
+    --gray:#222222;
+    --black:#161513;
+    --white:#FFF;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    background-color: var(--black);
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.max-width{
+    max-width:810px ;
+    margin-inline:auto;
+}
+
+nav{
+    background-color: var(--gray);
+    padding: 10px 0;
+}
+
+nav .logo{
+    cursor: pointer;
+    width: 150px;
+}
+
+nav .menu{
+    display: none;
+}
+
+nav .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 0;
+    
+}
+
+nav ul{
+    display: flex;
+    gap: 71px;
+    list-style-type: none;
+}
+
+nav ul .close{
+    display: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.3px;
+}
+
+.hero {
+    background-color: var(--black);
+    padding-top: 107px;
+    
+}
+
+.hero .max-width{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .avatar{
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    border: 3px dotted white;
+}
+
+.hero h1{
+    color: var(--Primary-Color, #FFF);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 63.357px;
+    margin-top: 42px;
+}
+
+.hero h1 .special{
+    background:linear-gradient(116deg, #FF8660 71.79%, #9A33FF 95.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.hero p{
+    color: var(--Secondary-Text, #C5C5C5);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.36px;
+    margin-top: 40px;
+}
+
+.hero .buttons{
+    margin-top: 54px;
+    display: flex;
+    gap:  18px;
+}
+
+.buttons button{
+    padding: 16px 30px;
+    outline: none;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button.filled{
+    background: var(--white);
+    color: var(--black);
+    font-size: 21.38px;
+    font-weight: 600;
+}
+
+button.transparent{
+    background: transparent;
+    color: var(--white);
+    font-size: 21.38px;
+    font-weight: 600;
+}
+
+.hero .exp-short{
+    margin-top: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}
+
+.exp-short h3{
+    color: #C5C5C5;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+}
+
+.exp-short .experience-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.experience-logo img{
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+}
+
+.projects{
+    background: var(--black);
+    padding-top:100px;
+    position: relative;
+}
+
+.projects .arrow{
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background-color: var(--gray);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow img{
+    width: 100%;
+}
+
+.arrow.left{
+    left: 14%;
+}
+
+.arrow.right{
+    right: 14%;
+}
+
+.projects h2,.education h2{
+    text-align: center;
+    background: var(--Orange-Gradient, linear-gradient(180deg, #FF8660 0%, #D5491D 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35.748px; /* 102.137% */
+    text-transform: uppercase;
+}
+
+.projects .project-container{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    width: 60vw;
+    overflow-x: hidden;
+    margin-inline: auto;
+    scroll-behavior: smooth;
+}
+
+.project-container .project{
+    min-width: 280px;
+    background-color: var(--gray);
+    cursor: pointer;
+}
+
+.project img{
+    width: 100%;
+    height: 40%;
+}
+
+.project .description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 23px 20px 23px;
+}
+
+.project .description p{
+    color: #C5C5C5;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.project .description h3{
+    color: var(--Primary-Color, #FFF);
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.project .left .desc{
+    color: var(--Primary-Color,#bdbbbb);
+    line-height: 25px;
+    margin-top: 12px;
+}
+
+.left .icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 16px;
+}
+
+.icons .icon{
+    width: 25px;
+}
+
+.experiences{
+    padding :96px 0 107px 0;
+    background: var(--black);
+}
+
+.experiences .section-header{
+    background: var(--Blue-Gradient, linear-gradient(180deg, #5BADFF 0%, #1373D1 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35.748px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hobby-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    grid-column-gap: 16px;
+    grid-row-gap: 20px;
+}
+
+.hobby-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--gray);
+    padding:25px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hobby-card img{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+.hobby-card h3{
+    color: var(--white);
+}
+
+.hobby-card p{
+    color: #C5C5C5;
+}
+
+.education{
+    padding-bottom: 50px;
+}
+
+.edu-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin: 25px 0;
+}
+
+.edu-cont .school-logo{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-top: 70px;
+    border: 8px solid white;
+}
+
+.edu-cont p{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    line-height: 32px;
+}
+
+.contact{
+    background-color: var(--gray);
+    padding: 82px 0 101px 0;
+}
+
+.contact h1{
+    color: var(--white);
+    font-size: 23.526px;
+    font-weight: 700;
+    letter-spacing: 0.471px;
+}
+
+.contact .description{
+    margin-top: 34px;
+    color: #C5C5C5;
+    font-size: 14.115px;
+    font-weight: 300;
+    letter-spacing: 0.282px;
+}
+
+.contact .email{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+.email p{
+    color: #C5C5C5;
+    font-size: 14.115px;
+    font-weight: 600;
+    letter-spacing: 0.282px;
+}
+
+.contact .social-icons{
+    display: flex;
+    gap: 27px;
+    align-items: center;
+    margin-top: 44px;
+}
+
+.social-icons img{
+    cursor: pointer;
+}
+
+@media screen and (max-width:815px) {
+    .max-width{
+        max-width: 700px;
+    }
+
+    .arrow.left{
+        left: 12%;
+    }
+    .arrow.right{
+        right: 12%;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .max-width{
+        max-width: 650px;
+    }
+    
+    .hero p br{
+        display: none;
+    }
+
+    .hobby-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .max-width{
+        max-width: 620px;
+    }
+    .arrow.left{
+        left: 9%;
+    }
+    .arrow.right{
+        right: 9%;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .max-width{
+        max-width: 580px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    nav{
+        padding: 20px;
+    }
+    nav ul{
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        top: -277px;
+        left: 0;
+        gap: 20px;
+        background: var(--gray);
+        align-items: center;
+        padding: 70px 0px;
+        transition: .2s linear;
+    }
+
+    nav ul li a{
+        width: 100vw;
+        text-align: center;
+    }
+
+    /* nav ul li a{
+        height: 100%;
+        width: 100%;
+    } */
+
+    nav ul li a:hover{
+        background-color: var(--black);
+    }
+
+    ul .close{
+        display: block !important;
+        position: absolute;
+        top: 20px ;
+        right: 30px;
+        height: 35px;
+        width: 35px;
+    }
+
+    nav .menu{
+        display: block;
+        height: 40px;
+        width: 50px;
+    }
+    .max-width{
+        max-width: 520px;
+    }
+
+    .experience .top .left h2{
+        font-size: 17px;
+    }
+
+    .experience .top .right .date{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .max-width{
+        max-width: 490px;
+    }
+    .html{
+        grid-area: a1;
+    }
+    .css{
+        grid-area: a2;
+    }
+    .js{
+        grid-area: a3;
+    }
+    .node{
+        grid-area: a4;
+    }
+    .react{
+        grid-area: a5;
+    }
+    .experience-logo{
+        display: grid!important;
+        grid-template-areas:"a1 a2 a3" "a4 a5 .";
+        grid-row-gap: 22px !important;
+        grid-column-gap:17px !important;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .max-width{
+        max-width: 450px;
+    }
+
+    .experience .top .left h2{
+        font-size: 15px;
+    }
+
+    .arrow.left{
+        left: 6%;
+    }
+    .arrow.right{
+        right: 6%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .max-width{
+        max-width: 82vw;
+    }
+
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .hero .buttons button{
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .exp-short .experience-logo{
+        gap: 40px;
+    }
+
+    .experience-logo img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .hobby-container{
+        grid-template-columns: 1fr;
+    }
+
+    .project-container .project{
+        width: 350px;
+    }
+
+    .experience .top{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        
+    }
+
+    .experience .top .date{
+        margin-left: 45px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .hero .buttons button{
+        padding: 12px 17px;
+        font-size: 15px;
+    }
+
+    .project-container .project{
+        width: 280px;
+    }
+}
+
+
+
+@media screen and (max-width:350px) {
+    .hero .buttons button{
+        padding: 12px 13px;
+        font-size: 13px;
+    }
+
+    .hero h1{
+        font-size: 30px;
+        line-height: 41px;
+    }
+
+    .project-container .project{
+        width: 280px;
+    }
+
+    .experience-logo{
+        gap: 30px;
+    }
+
+    .experience-logo img{
+        height: 25px;
+        width: 25px;
+    }
+}
